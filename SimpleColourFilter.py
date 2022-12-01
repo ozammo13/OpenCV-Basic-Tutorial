@@ -18,7 +18,7 @@ dim = (640, 480) #image Dimensions
 lower = np.array([hMin, sMin, vMin])
 upper = np.array([hMax, sMax, vMax])
 
-cap = cv.VideoCapture(0)
+cap = cv.VideoCapture(1)
 if not cap.isOpened():
     print("Cannot open camera")
     exit()
@@ -33,7 +33,7 @@ while True:
     Colour = cv.cvtColor(frame, cv.COLOR_BGR2HSV) #turns it into a hsv
     Blur = cv.blur(Colour, [30, 30]) #blurs
     filtered = cv.inRange(Blur, lower, upper)#filters the unwanted colours
-    cv.imshow('frame', filtered) #show video
+    cv.imshow('frame', frame) #show video
     if cv.waitKey(1) == ord('q'):
         break
 # When everything done, release the capture

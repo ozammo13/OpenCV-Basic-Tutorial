@@ -10,7 +10,7 @@ def nothing(x):
 
 
 # Load image
-cam = cv2.VideoCapture(2)
+cam = cv2.VideoCapture(1)
 ret, image = cam.read()
 dim = (640, 480)
 image = cv2.flip(image, 0)
