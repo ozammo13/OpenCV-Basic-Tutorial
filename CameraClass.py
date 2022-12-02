@@ -16,6 +16,11 @@ class camera:
 
     def linkCamera(self):
         self.camFeed = cv2.VideoCapture(self.cameraLink)
+        ret, frame = self.camFeed.read()
+        ret, frame = self.camFeed.read()
+        ret, frame = self.camFeed.read()
+        ret, frame = self.camFeed.read()
+
         print("Initializing")
         time.sleep(1)
 
